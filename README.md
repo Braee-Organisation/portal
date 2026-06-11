@@ -1,7 +1,7 @@
 <p align="center">
   <img src="/assets/images/portal-logo-white.svg" alt="Portal Logo"/>
 </p>
-<h5 align="center">The all-in-one recipe tracker & meal planner, built in HTML, CSS & JS</h5>
+<h5 align="center">The central home for all Braee Organisation web applications & services</h5>
 
 ## Abou
 

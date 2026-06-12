@@ -36,7 +36,7 @@ body.loginPage {
     width: 300px;
     border: 3px solid #1A5276;
     border-radius: 25px;
-    padding: 25px;
+    padding: 30px;
 }
 
 #loginForm {
@@ -45,6 +45,8 @@ body.loginPage {
     gap: 8px;
     width: 100%;
     text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #loginForm div {
@@ -58,8 +60,29 @@ body.loginPage {
     box-sizing: border-box;
 }
 
-#loginForm div:last-child {
-    flex-direction: row;
+#submitButton {
+    color: white;
+    background-color: #1A5276;
+    border: 3px solid #1A5276;
+    border-radius: 5px;
+    width: 75px;
+}
+
+#rememberSubmitRow {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#rememberMeContainer {
+    display: flex;
+    flex-direction: row !important;
     align-items: center;
     gap: 6px;
+}
+
+#copyrightText {
+    font-size: 0.8rem;
 }

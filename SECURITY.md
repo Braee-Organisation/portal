@@ -49,10 +49,10 @@ Alternatively, contact the maintainer directly via GitHub: [@cormacwilson](https
 - Passwords hashed with **Argon2** — never stored in plain text
 - JWTs stored in **HTTP-only, Secure, SameSite** cookies scoped to `.braeeorganisation.co.uk`
 - Financial data in Vault **encrypted at rest**
-- Bank credentials **never handled** by Vault — delegated entirely to the Open Banking provider via OAuth 2.0
-- All secrets stored in **environment variables** — never hardcoded
+- Bank credentials **never handled** by Vault, delegated entirely to the Open Banking provider via OAuth 2.0
+- All secrets stored in **environment variables**, never hardcoded
 - Dependencies regularly audited via `npm audit`
-- **HTTPS** enforced across all subdomains via Apache and Let's Encrypt
+- **HTTPS** enforced across all subdomains via Let's Encrypt
 
 ---
 

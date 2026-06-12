@@ -8,7 +8,7 @@
 
 ## Our Commitment
 
-Braee Organisation is a personal open development project. Anyone who interacts with this project — whether opening an issue, submitting a pull request, or leaving a comment — is expected to do so respectfully and in good faith.
+Braee Organisation is a personal open development project. Anyone who interacts with this project, whether opening an issue, submitting a pull request, or leaving a comment, is expected to do so respectfully and in good faith.
 
 ---
 
@@ -17,7 +17,7 @@ Braee Organisation is a personal open development project. Anyone who interacts 
 - Be respectful and constructive in all communications
 - Give and receive feedback graciously
 - Focus on the problem, not the person
-- Be patient — this is a student project maintained in spare time
+- Be patient, this is a student project maintained in spare time
 - Credit others where credit is due
 
 ---

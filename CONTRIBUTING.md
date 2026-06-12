@@ -1,7 +1,7 @@
 # Contributing
 
 **Organisation:** Braee Organisation (Cormac Wilson)
-**Applies to:** Portal · Simmer · Vault
+**Applies to:** Portal · Bedrock · Simmer · Vault
 **Last Updated:** June 2026
 
 ---

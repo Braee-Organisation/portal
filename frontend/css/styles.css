@@ -36,6 +36,40 @@ h2 { font-size: 1.4rem; }
 h3 { font-size: 1.1rem; }
 p  { font-size: 0.9rem; }
 
+/* Alpha banner content */
+
+#alphaBanner {
+    background-color: #fff3cd;
+    color: #856404;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ffeeba;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 0.9rem;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+#alphaTag {
+    background-color: #856404;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+#alphaMessage {
+    margin: 0;
+}
+
 /* Login page */
 body.loginPage {
     display: flex;
@@ -172,23 +206,31 @@ body.homePage {
     flex-direction: column;
     background-color: #f8fafc;
     color: var(--text-color);
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-top: 50px;
 }
 
 #navContainer {
-    height: 100%;
     width: 220px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 50px;
     left: 0;
+    bottom: 0;
     background-color: var(--surface-muted);
     overflow-y: auto;
     padding-top: 0;
     border-right: 1px solid var(--border-color);
-    box-shadow: 3px 0 5px -2px rgba(87, 87, 87, 0.2);
+    box-shadow: 3px 0 5px -2px rgba(44, 31, 31, 0.2);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+}
+
+body.homePage #mainContainer {
+    margin-left: 220px;
+    padding: 24px;
 }
 
 #navContainer > div {
@@ -287,5 +329,5 @@ body.homePage {
 }
 
 #mainContainer {
-
+    position: relative;
 }

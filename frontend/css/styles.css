@@ -1,6 +1,21 @@
 /* Global */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --primary-color: #1A5276;
+    --primary-hover: #14445F;
+    --surface-color: #FFFFFF;
+    --surface-muted: #F5F5F5;
+    --border-color: #E0E0E0;
+    --text-color: #575757;
+    --text-dark: #1F1F1F;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-family: 'Roboto', sans-serif;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -8,8 +23,12 @@ html, body {
     padding: 0;
 }
 
-html, input {
-    font-family: 'Roboto', sans-serif;
+html, input, button {
+    font-family: var(--font-family);
+}
+
+body {
+    color: var(--text-color);
 }
 
 h1 { font-size: 2rem; }
@@ -22,8 +41,8 @@ body.loginPage {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/images/background.jpg);
-    background-size: cover;
+    background: linear-gradient(135deg, rgba(26, 82, 118, 0.75), rgba(20, 68, 95, 0.75)), url(/assets/images/background.jpg) center/cover no-repeat;
+    color: var(--text-color);
 }
 
 #loginContainer {
@@ -31,41 +50,99 @@ body.loginPage {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: white;
+    background-color: var(--surface-color);
     gap: 10px;
-    width: 300px;
-    border: 3px solid #1A5276;
-    border-radius: 25px;
-    padding: 30px;
+    width: 340px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-md);
+}
+
+#loginContainer img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+#loginContainer h3 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin: 4px 0 8px;
+    line-height: 1.5;
 }
 
 #loginForm {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
     text-align: left;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 18px;
+    margin-bottom: 20px;
 }
 
-#loginForm div {
+#loginForm > div {
     display: flex;
     flex-direction: column;
+}
+
+.inputGroup {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    pointer-events: none;
 }
 
 #loginForm input[type="text"],
 #loginForm input[type="password"] {
     width: 100%;
     box-sizing: border-box;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.12);
 }
 
 #submitButton {
     color: white;
-    background-color: #1A5276;
-    border: 3px solid #1A5276;
-    border-radius: 5px;
-    width: 75px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    width: auto;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#submitButton .inputIcon {
+    position: static;
+    transform: none;
+    width: 18px;
+    height: 18px;
+}
+
+#submitButton:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
 }
 
 #rememberSubmitRow {
@@ -81,29 +158,37 @@ body.loginPage {
     flex-direction: row !important;
     align-items: center;
     gap: 6px;
+    color: var(--text-color);
 }
 
 #copyrightText {
     font-size: 0.8rem;
+    color: var(--text-color);
 }
 
 /* Home page */
 body.homePage {
     display: flex;
     flex-direction: column;
+    background-color: #f8fafc;
+    color: var(--text-color);
 }
 
 #navContainer {
-    height: 100vh;
+    height: 100%;
     width: 220px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #f5f5f5;
+    background-color: var(--surface-muted);
     overflow-y: auto;
     padding-top: 0;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid var(--border-color);
+    box-shadow: 3px 0 5px -2px rgba(87, 87, 87, 0.2);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 #navContainer > div {
@@ -111,28 +196,91 @@ body.homePage {
     flex-direction: column;
     gap: 4px;
     padding: 16px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#navLogo {
+    display: block;
+    width: 100%;
+    max-width: 163px;
+    height: auto;
+    margin: 4px auto 12px;
+    object-fit: contain;
 }
 
 #navContainer a {
     padding: 12px 12px;
     text-decoration: none;
     font-size: 0.95rem;
-    color: #575757;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     gap: 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: all 0.2s ease;
 }
 
 #navContainer a:hover {
     background-color: #e8e8e8;
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 #navContainer a.active {
     background-color: #e3f2fd;
-    color: #0066cc;
+    color: var(--primary-color);
+}
+
+#navBottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+}
+
+#userProfileCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    background-color: var(--surface-color);
+    box-shadow: var(--shadow-sm);
+}
+
+#userAvatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), #4A90E2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+#userProfileInfo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+#userProfileName {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#userProfileEmail, #userProfileUsername {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .navIcons {

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 64" width="183" height="64">
+  <defs>
+    <style>
+      <![CDATA[
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+      ]]>
+    </style>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="16" fill="#1A5276"/>
+  <path d="M12 50 L12 28 Q12 12 32 12 Q52 12 52 28 L52 50" fill="none" stroke="#AED6F1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 50 L20 30 Q20 22 32 22 Q44 22 44 30 L44 50" fill="none" stroke="#EAF4FC" stroke-width="3" stroke-linecap="round"/>
+  <rect x="10" y="49" width="44" height="4" rx="2" fill="#2E86C1"/>
+  <circle cx="32" cy="12" r="3.5" fill="#85C1E9"/>
+  <text x="80" y="34" font-family="Roboto, system-ui, sans-serif" font-size="26" font-weight="500" fill="#575757" letter-spacing="-0.5">Portal</text>
+  <text x="80" y="52" font-family="Roboto, system-ui, sans-serif" font-size="12" font-weight="400" fill="#575757">Braee Organisation</text>
+</svg>

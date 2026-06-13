@@ -250,7 +250,7 @@ body.homePage {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), #4A90E2);
+    background-color: var(--primary-color);
     color: white;
     display: flex;
     align-items: center;
